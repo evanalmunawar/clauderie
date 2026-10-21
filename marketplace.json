@@ -1,0 +1,13 @@
+{
+  "name": "clauderie-marketplace",
+  "owner": {
+    "name": "Evan Almunawar"
+  },
+  "plugins": [
+    {
+      "name": "clauderie",
+      "source": "./",
+      "description": "Kumpulan skill Claude lintas topik — desain frontend catchy, alur revisi elemen, dan desain turunan (design family)."
+    }
+  ]
+}

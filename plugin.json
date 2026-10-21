@@ -1,0 +1,10 @@
+{
+  "name": "clauderie",
+  "version": "1.0.0",
+  "description": "Kumpulan skill Claude lintas topik — dimulai dari desain frontend (desain catchy, revisi elemen spesifik, desain turunan/design family), akan terus bertambah.",
+  "author": {
+    "name": "Evan Almunawar"
+  },
+  "keywords": ["skills", "frontend", "design"],
+  "skills": "./skills"
+}
