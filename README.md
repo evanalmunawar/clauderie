@@ -1,5 +1,7 @@
 # clauderie
 
+![Validate skills](https://github.com/evanalmunawar/clauderie/actions/workflows/validate-skills.yml/badge.svg)
+
 Kumpulan **skill** untuk Claude — tempat nyimpen dan ngembangin skill lintas topik, bukan cuma satu arah. Dimulai dari skill-skill desain frontend: bikin desain baru yang catchy/tidak generik, revisi elemen spesifik lewat varian interaktif, dan bikin produk turunan yang "sekeluarga" dengan desain induk yang sudah ada.
 
 Repo ini dikemas sebagai **Claude Code plugin**, jadi bisa diinstall satu baris lewat marketplace lokal — tapi tiap skill juga bisa dipakai lepas (copy folder-nya saja) kalau tidak mau pakai sistem plugin.
@@ -80,8 +82,15 @@ Sistem plugin di atas khusus Claude Code. Di claude.ai, upload isi salah satu fo
 3. Tidak perlu daftarkan manual di `plugin.json` — field `"skills": "./skills"` sudah membuat Claude Code auto-discover semua subfolder di dalamnya
 4. Update tabel "Isi" di README ini
 
-## Validasi plugin (opsional, sebelum publish)
+## Validasi
+
+Repo ini punya dua lapis validasi:
+
+1. **`claude plugin validate .`** — validasi bawaan Claude Code, cek manifest `plugin.json` sesuai spesifikasi resmi.
+2. **`scripts/validate_skills.py`** — script tambahan yang mengecek tiap `SKILL.md`: frontmatter ada (`name` + `description`), nama di frontmatter konsisten dengan nama foldernya, folder pakai kebab-case, dan body panduan tidak kosong. Otomatis jalan lewat **GitHub Actions** (lihat badge di atas) setiap ada push atau pull request — kalau ada skill yang nggak valid, check-nya bakal merah.
+
+Jalankan manual di lokal:
 
 ```bash
-claude plugin validate .
+python3 scripts/validate_skills.py
 ```
